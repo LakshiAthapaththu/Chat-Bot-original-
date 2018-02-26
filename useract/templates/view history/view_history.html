@@ -1,0 +1,29 @@
+{% extends 'block/block.html' %}
+{% block title1 %}YOUR HISTORY{% endblock %}
+{% block title %}INQUIAMAK VIEW HISTORY{% endblock %}
+{% block body %}
+<!-- Table -->
+<section>
+    <div class="table-wrapper">
+        <table class="alt">
+            <thead>
+            <tr>
+                <th>Inquiry ID</th>
+                <th>Description</th>
+                <th>Reported Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for object in obj %}
+                <tr>
+                <td>{{ object.inquiry_id }}</td>
+                <td>{{ object.description }}</td>
+                <td>{{ object.date }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+</section>
+{% endblock %}
