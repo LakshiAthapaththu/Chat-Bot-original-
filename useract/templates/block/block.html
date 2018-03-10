@@ -13,27 +13,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-
-<!-- Header -->
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">{% block title1 %}{% endblock %}</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="#">EDIT DETAILS</a></li>
-      <li><a href="{% url 'viewhistory' %}">VIEW HISTORY</a></li>
-        <li><a href="#">MAKE INQUARY</a></li>
-        <li><a href="{% url 'logout' %}">LOGOUT</a></li>
+<header id="header" class="skel-layers-fixed">
+    {% block nav %}{% endblock %}
 
 
-    </ul>
-  </div>
-</nav>
-{% block body %} <!--put body here-->
+</header>
+{% block body %}
+
 {% endblock %}
-<footer id="footer">
+<footer id="footer" >
     <div class="inner">
         <ul class="icons">
             <li><a href="#" class="icon fa-facebook">
@@ -51,7 +39,7 @@
         </ul>
         <ul class="copyright">
             <li>&copy; INQUIAMAK</li>
-            <li>24 hours call center DIAL 1987</li>
+            <li>24 hours call center DIAL 1111</li>
 
         </ul>
     </div>

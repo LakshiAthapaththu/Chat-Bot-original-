@@ -13,6 +13,7 @@ class Report(models.Model):
     report_id= models.IntegerField(primary_key=True)
     authority_id = models.ForeignKey(
     Authority,
+    null=False,
     on_delete= models.CASCADE)
 
 
@@ -26,8 +27,11 @@ class Inquiry(models.Model):
     date = models.DateField()
     add_state = models.BooleanField()
     report_id= models.ForeignKey(
+
         Report,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        null = False
+
     )
 
 

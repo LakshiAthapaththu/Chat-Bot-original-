@@ -1,0 +1,38 @@
+{% extends 'block/block.html' %}
+{% block title1 %}REPORT{% endblock %}
+{% block title %}REPORT{% endblock %}
+{% block nav %}
+    <a href="{% url 'adminpage' %}">| HOME</a>
+    <a href="{% url 'logout' %}">| LOG OUT</a>
+{% endblock %}
+{% block body %}
+<!-- Table -->
+    {% for object in authority %}
+        <h3 align="middle">Report of {{ object.authority_name}} for {{ date }}</h3>
+    {% endfor %}
+<section>
+    <div class="table-wrapper">
+        <table class="alt">
+        <p>
+        </p>
+            <thead>
+            <tr>
+                <th>Inquiry ID</th>
+                <th>Description</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for obj in object %}
+                <tr>
+                <td>{{ obj.inquiry_id }}</td>
+                <td>{{ obj.description }}</td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+</section>
+{% endblock %}

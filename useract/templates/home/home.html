@@ -1,6 +1,12 @@
 {% extends 'block/block.html' %}
 {% block title %}INQUIAMAK HOME{% endblock %}
 {% block title1 %}HOME{% endblock %}
+{% block nav%}
+    <a href="{% url 'viewhistory' %}">| EDIT DETAILS</a>
+    <a href="{% url 'logout' %}">| VIEW HISTORY</a>
+  <a href="{% url 'logout' %}">| LOG OUT</a>
+{% endblock %}
 {% block body %}
   <h1>{{ user }}</h1>
+    <h1>{{ staff }}</h1>
 {% endblock %}

@@ -1,0 +1,173 @@
+<html>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/main.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/ie8css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/ie9.css' %}"/>
+<script src="{% static 'assets/js/ie/html5shiv.js' %}"></script>
+
+<head>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <script src="{% static 'assets/js/ie/html5shiv.js' %}"></script>
+    <title>InquiaMaK Admin Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+<!--navigation-->
+<header id="header" class="skel-layers-fixed">
+    <h1><a href="index.html">ADMIN HOME</a></h1>
+    <a href="{% url 'adminpage' %}">| HOME</a>
+    <a href="{% url 'logout' %}">| LOG OUT</a>
+
+</header>
+
+
+<section id="banner">
+    <i class="icon fa-diamond"></i>
+    <h2>INQUIAMAK INQUIRY MAKING SYSTEM</h2>
+    <p>YOU ARE LOGGED IN AS {{ user }} </p>
+</section>
+<!-- Three -->
+<section id="four" class="wrapper style2 special">
+    <div class="inner">
+        <header class="major narrow">
+            <h2>Search Reports</h2>
+            <p></p>
+        </header>
+        <form method="post" action="{% url 'viewreport' %}">
+            {% csrf_token %}
+            <div class="row uniform 50%">
+                <input class="form-control" id="date" name="date"  placeholder="DD/MM/YYYY" type="text"/>
+            </div>
+                <div class="12u$">
+                    <p>
+
+                    </p>
+                    <div class="select-wrapper" >
+                        <select name='authority' id="category">
+                            <option value="3" selected disabled>AUTHORITY</option>
+                            <option value="1" id="val1">Ceylon Transport Board</option>
+                            <option value="2" id="val2">Sri Lanka Railways</option>
+                        </select>
+                    </div>
+                </div>
+            <p>
+                {{ msg }}
+            </p>
+            <ul id="list">
+                        <li><button type="submit" class="btn tf-btn btn-default" name="from" value="home">Submit</button>
+                        <button type="reset" class="btn tf-btn btn-default" />Reset</li>
+            </ul>
+
+
+        </form>
+    </div>
+</section>
+
+<section id="four" class="wrapper style2 special">
+    <div class="inner">
+        <header class="major narrow">
+            <h2>Train Data</h2>
+            <p></p>
+        </header>
+        <form method="post" action="{% url 'addData' %}">
+            {% csrf_token %}
+            <div class="row uniform 50%">
+                <input class="form-control" id="sen" name="sentence" placeholder="SENTENCE" type="text"/>
+            </div>
+                <div class="12u$">
+                    <p>
+
+                    </p>
+                    <div class="select-wrapper" >
+                        <select name='layer' id="category" >
+                            <option value="" selected disabled>LAYER</option>
+                            {% for layer in layers %}
+                                {% if layer.layer_id != 0 %}
+                                    <option value="{{ layer.layer_id }}" id="val1">{{ layer.layer_name }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            <p>
+
+            </p>
+                <div class="12u$">
+                    <p>
+
+                    </p>
+                    <div class="select-wrapper" >
+                        <select name='class' id="category">
+                        <option value="" selected disabled>CLASS</option>
+                            {% for class in classes %}
+                                {% if class.class_id != 0 %}
+                                    <option value="{{ class.class_id }}" id="val1">{{ class.class_name }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            <p>
+
+            </p>
+            <div class="12u$">
+                    <p>
+
+                    </p>
+                    <div class="select-wrapper" >
+                        <select name='parent' id="category">
+                            <option value="" selected disabled>PARENT CLASS</option>
+
+                            {% for class in classes %}
+
+                                    <option value="{{ class.class_id }}" id="val1">{{ class.class_name }}</option>
+
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            <p>
+                {{ msg1 }}
+            </p>
+            <ul>
+                        <li><button type="submit" class="btn tf-btn btn-default" name="from" value="home">Submit</button>
+                        <button type="reset" class="btn tf-btn btn-default" />Reset</li>
+            </ul>
+
+
+        </form>
+    </div>
+</section>
+<!-- Footer -->
+<footer  id="footer" >
+    <div class="inner">
+        <ul class="icons">
+            <li><a href="https://www.facebook.com/CeylonElectricityBoard/" class="icon fa-facebook">
+                    <span class="label">Facebook</span>
+                </a></li>
+            <li><a href="https://twitter.com/CEB_lk?lang=en" class="icon fa-twitter">
+                    <span class="label">Twitter</span>
+                </a></li>
+            <li><a href="#" class="icon fa-instagram">
+                    <span class="label">Instagram</span>
+                </a></li>
+            <li><a href="https://www.linkedin.com/company/ceylon-electricity-board" class="icon fa-linkedin">
+                    <span class="label">LinkedIn</span>
+                </a></li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; MINDLABZ</li>
+            <li>24 hours call center DIAL 1987</li>
+
+        </ul>
+    </div>
+</footer>
+<script src="{% static 'assets/js/ie/html5shiv.js' %}"></script>
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/util.js' %}"></script>
+<script src="{% static 'assets/js/ie/respond.min.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+</html>

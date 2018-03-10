@@ -4,20 +4,29 @@ from django.shortcuts import render, redirect
 from useract.forms import SignUpForm
 from useract.models import Inquiry
 from django.contrib.auth.models import User
-
+from chatbot.models import Layers,Classes
 class SignIn(View):
     temp = 'home/home.html'
     temp1 = 'registration/login.html'
+    temp2 = 'adminHome/adminHome.html'
     msg = ""
     def post(self,request):
         username = request.POST.get('username')
         password=request.POST.get('password')
-        #user=User.objects.filter(email=email,password=password)
+        staff_state = "no"
+        #user1=User.objects.filter(username=username,password=password)
         user = authenticate(username=username, password=password)
         if user is not None:
-            #user_det = request.session['username']
             request.session['users'] = username
-            return render(request, self.temp, {'user':request.session['users']})
+            if(user.is_staff):
+                all_layer_objects = Layers.objects.all()
+                all_class_objects = Classes.objects.all()
+                return render(request, self.temp2, {'user': request.session['users'], 'layers': all_layer_objects,
+                                                       'classes': all_class_objects})
+
+            else:
+
+                return render(request, self.temp, {'user':request.session['users']})
         else:
             msg="invalid"
             return render(request, self.temp1, {'msg':msg})

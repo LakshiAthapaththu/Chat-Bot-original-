@@ -9,6 +9,18 @@
 */
 
 /* Reset */
+#category {
+    padding: 5px;
+    color: darkgray;
+    font-size: 12px;
+    background: #1E2832;
+    -webkit-appearance: none;
+
+}
+#val1{
+	color: darkgray;
+
+}
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
@@ -1929,7 +1941,7 @@
 	.select-wrapper {
 		text-decoration: none;
 		display: block;
-		position: relative;
+		position: inherit;
 	}
 
 		.select-wrapper:before {
@@ -2863,7 +2875,7 @@
 		}
 
 			.wrapper.style1 input, .wrapper.style1 select, .wrapper.style1 textarea {
-				color: #555;
+				color: beige;             /*changed*/
 			}
 
 			.wrapper.style1 a {
@@ -2875,7 +2887,7 @@
 			}
 
 			.wrapper.style1 h1, .wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6 {
-				color: #555;
+				color: #1E2832; /*changed*/
 			}
 
 			.wrapper.style1 blockquote {
@@ -2883,7 +2895,7 @@
 			}
 
 			.wrapper.style1 code {
-				background: #fff;
+				background: brown;    /*changed brown from black*/
 				border-color: rgba(144, 144, 144, 0.25);
 			}
 
@@ -2896,7 +2908,7 @@
 			}
 
 			.wrapper.style1 .feature {
-				background-color: #fff;
+				background-color: #000000;
 			}
 
 			.wrapper.style1 label {
@@ -2908,7 +2920,7 @@
 			.wrapper.style1 input[type="email"],
 			.wrapper.style1 select,
 			.wrapper.style1 textarea {
-				background-color: #fff;
+				background-color: darkgray; /*changed*/
 				border-color: rgba(144, 144, 144, 0.25);
 				color: inherit;
 			}
@@ -2933,13 +2945,13 @@
 
 				.wrapper.style1 input[type="checkbox"] + label:before,
 				.wrapper.style1 input[type="radio"] + label:before {
-					background-color: #fff;
+					background-color: #1E2832; /*changed*/
 					border-color: rgba(144, 144, 144, 0.25);
 				}
 
 			.wrapper.style1 input[type="checkbox"]:checked + label:before,
 			.wrapper.style1 input[type="radio"]:checked + label:before {
-				background-color: #fff;
+				background-color: #1E2832; /*changed*/
 				border-color: #51BAA4;
 				color: #555;
 			}
@@ -2987,7 +2999,7 @@
 			}
 
 				.wrapper.style1 table tbody tr:nth-child(2n + 1) {
-					background-color: #fff;
+					background-color: #1E2832;
 				}
 
 			.wrapper.style1 table th {
@@ -3093,12 +3105,12 @@
 					}
 
 		.wrapper.style2 {
-			background-color: #1E2832;
+			background-color: darkgray; /*changed*/
 			color: rgba(255, 255, 255, 0.75);
 		}
 
 			.wrapper.style2 input, .wrapper.style2 select, .wrapper.style2 textarea {
-				color: #fff;
+				color: #1E2832;/*changed*/
 			}
 
 			.wrapper.style2 a {
@@ -3106,11 +3118,11 @@
 			}
 
 			.wrapper.style2 strong, .wrapper.style2 b {
-				color: #fff;
+				color: #1E2832;
 			}
 
 			.wrapper.style2 h1, .wrapper.style2 h2, .wrapper.style2 h3, .wrapper.style2 h4, .wrapper.style2 h5, .wrapper.style2 h6 {
-				color: #fff;
+				color: aliceblue;
 			}
 
 			.wrapper.style2 blockquote {
@@ -3127,7 +3139,7 @@
 			}
 
 			.wrapper.style2 header p {
-				color: #fff;
+				color: gainsboro;
 			}
 
 			.wrapper.style2 .feature {
@@ -3135,7 +3147,7 @@
 			}
 
 			.wrapper.style2 label {
-				color: #fff;
+				color: gainsboro;
 			}
 
 			.wrapper.style2 input[type="text"],
@@ -3176,7 +3188,7 @@
 			.wrapper.style2 input[type="radio"]:checked + label:before {
 				background-color: rgba(255, 255, 255, 0.05);
 				border-color: #51BAA4;
-				color: #fff;
+				color: #1E2832;/*changed*/
 			}
 
 			.wrapper.style2 input[type="checkbox"]:focus + label:before,
@@ -3328,7 +3340,7 @@
 					}
 
 		.wrapper.style3 {
-			background-color: #1E2832;
+			background-color: #1E2832; /*changed*/
 			color: rgba(255, 255, 255, 0.75);
 			background-attachment: fixed;
 			background-image: url("images/overlay.png"), url("../../images/pic11.jpg");
@@ -3336,7 +3348,7 @@
 		}
 
 			.wrapper.style3 input, .wrapper.style3 select, .wrapper.style3 textarea {
-				color: #fff;
+				color: #1E2832;/*changed*/
 			}
 
 			.wrapper.style3 a {
@@ -3344,11 +3356,11 @@
 			}
 
 			.wrapper.style3 strong, .wrapper.style3 b {
-				color: #fff;
+				color: #1E2832;/*changed*/
 			}
 
 			.wrapper.style3 h1, .wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 h4, .wrapper.style3 h5, .wrapper.style3 h6 {
-				color: #fff;
+				color: darkgray;/*changed*/
 			}
 
 			.wrapper.style3 blockquote {
@@ -3365,7 +3377,7 @@
 			}
 
 			.wrapper.style3 header p {
-				color: #fff;
+				color: aliceblue;
 			}
 
 			.wrapper.style3 .feature {
@@ -3373,7 +3385,7 @@
 			}
 
 			.wrapper.style3 label {
-				color: #fff;
+				color: aliceblue;
 			}
 
 			.wrapper.style3 input[type="text"],
@@ -3414,7 +3426,7 @@
 			.wrapper.style3 input[type="radio"]:checked + label:before {
 				background-color: rgba(255, 255, 255, 0.05);
 				border-color: #51BAA4;
-				color: #fff;
+				color: #1E2832;/*changed*/
 			}
 
 			.wrapper.style3 input[type="checkbox"]:focus + label:before,
@@ -3464,7 +3476,7 @@
 				}
 
 			.wrapper.style3 table th {
-				color: #fff;
+				color: aliceblue;
 			}
 
 			.wrapper.style3 table thead {
@@ -3486,7 +3498,7 @@
 			.wrapper.style3 .button {
 				background-color: #fff;
 				box-shadow: none;
-				color: #1E2832 !important;
+				color: #1E2832 !important; /*changed*/
 			}
 
 				.wrapper.style3 input[type="submit"].icon:before,
@@ -4118,9 +4130,10 @@
 /* Footer */
 
 	#footer {
-		background-color: #1E2832;
+		background-color: #1E2832;  /*change the footer bachground color*/
 		color: rgba(255, 255, 255, 0.75);
 		text-align: center;
+		position: relative;
 	}
 
 		#footer input, #footer select, #footer textarea {
@@ -4226,3 +4239,9 @@
 			}
 
 		}
+#list{
+	list-style: none;
+}
+#footer{
+	position: relative;
+}

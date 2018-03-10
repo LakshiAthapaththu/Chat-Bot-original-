@@ -1,6 +1,16 @@
 {% extends 'block/block.html' %}
 {% block title1 %}YOUR HISTORY{% endblock %}
 {% block title %}INQUIAMAK VIEW HISTORY{% endblock %}
+{% block nav %}
+<ul class="nav navbar-nav">
+      <li><a href="#">EDIT DETAILS</a></li>
+      <li><a href="{% url 'viewhistory' %}">VIEW HISTORY</a></li>
+        <li><a href="#">MAKE INQUARY</a></li>
+        <li><a href="{% url 'logout' %}">LOGOUT</a></li>
+
+
+    </ul>
+{% endblock%}
 {% block body %}
 <!-- Table -->
 <section>
