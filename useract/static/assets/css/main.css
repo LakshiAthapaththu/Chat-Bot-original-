@@ -9,6 +9,16 @@
 */
 
 /* Reset */
+#he1{
+	font-size: small;
+}
+#date{
+	 padding: 5px;
+    color: darkgray;
+    font-size: 12px;
+    background: #1E2832;
+    -webkit-appearance: none;
+}
 #category {
     padding: 5px;
     color: darkgray;

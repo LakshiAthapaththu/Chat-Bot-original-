@@ -1,38 +1,97 @@
 from django.shortcuts import render
+from django.utils.datetime_safe import date
 from django.views.generic import View
+from io import BytesIO
+from reportlab.lib.enums import TA_JUSTIFY
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.units import cm
 from reportlab.pdfgen import canvas
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from useract.models import  Inquiry,Report,Authority
 from chatbot.models import Layers,Classes,sets,train
 import re
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import letter, A4
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph
+
+class PdfPrint():
+    def __init__(self, buffer, pageSize):
+        self.buffer = buffer
+        # default format is A4
+        if pageSize == 'A4':
+            self.pageSize = A4
+        elif pageSize == 'Letter':
+            self.pageSize = letter
+        self.width, self.height = self.pageSize
+
+    def report(self,title,inquiry_content):
+        # set some characteristics for pdf document
+        doc = SimpleDocTemplate(
+            self.buffer,
+            rightMargin=72,
+            leftMargin=72,
+            topMargin=30,
+            bottomMargin=72,
+            pagesize=self.pageSize)
+        styles = getSampleStyleSheet()
+        data = []
+        data.append(Paragraph(title, styles['Title']))
+        for objec in inquiry_content:
+            data.append(Paragraph('TIME : 9.30',styles['Bullet']))
+            data.append(Paragraph('INQUIRY :  '+objec.description,styles['BodyText']))
+            data.append(Paragraph('   ',styles['Normal']))
+
+        #data.append(table)
+        doc.build(data)
+        #doc.build(table)
+        pdf = self.buffer.getvalue()
+        self.buffer.close()
+        return pdf
+
+
 class getReport(View):
     temp = 'viewReport/daily_report.html'
     temp1 = 'adminHome/adminHome.html'
+
     def post(self,request):
-        all_layer_objects = Layers.objects.all()
-        all_class_objects = Classes.objects.all()
 
-        msg2 = "invalid entry"
-        if(request.POST.get('date') is None or request.POST.get('authority') is None):
-            return render(request, self.temp1, {'user': request.session['users'], 'layers': all_layer_objects,
-                                                   'classes': all_class_objects,'msg':msg2})
-        else:
-            reg = re.compile("[\d]{1,2}/[\d]{1,2}/[\d]{2}")
-            date = request.POST.get('date')
-            authority = request.POST.get('authority')
-            new_date = ""
-            if(reg.match(date)):
-              for letter in date:
-                    if(letter != "/"):
-                        new_date = new_date + letter
-              report_id = str(authority)+str(new_date)
-              authorityName = Authority.objects.filter(authority_id=int(authority))
-              obj = Inquiry.objects.filter(report_id=report_id)
-              return render(request, self.temp, {'date':date,'authority':authorityName,'object':obj})
-            else:
+            all_layer_objects = Layers.objects.all()
+            all_class_objects = Classes.objects.all()
+
+            msg2 = "invalid entry"
+            if(request.POST.get('date') is None or request.POST.get('authority') is None):
                 return render(request, self.temp1, {'user': request.session['users'], 'layers': all_layer_objects,
-                                                       'classes': all_class_objects,'msg':msg2})
+                                                           'classes': all_class_objects,'msg':msg2})
+            else:
+                reg = re.compile("[\d]{1,2}/[\d]{1,2}/[\d]{2}")
+                date = request.POST.get('date')
+                authority = request.POST.get('authority')
+                new_date = ""
+                if(reg.match(date)):
+                    for letter in date:
+                        if(letter != "/"):
+                            new_date = new_date + letter
+                    report_id = str(authority)+str(new_date)
+                    authorityName = Authority.objects.filter(authority_id=int(authority))
+                    authNameStr = ''
+                    for auth in authorityName:
+                        authNameStr = auth.authority_name
+                    obj = Inquiry.objects.filter(report_id=report_id)
+                    if (request.POST.get('btn') == 'view'):
+                        return render(request, self.temp, {'date':date,'authority':authorityName,'object':obj})
+                    elif (request.POST.get('btn') == 'pdf'):
+                        response = HttpResponse(content_type='application/pdf')
+                        filename = 'report_of_'+authNameStr+"_"+date
+                        response['Content-Disposition'] = 'attachement; filename={0}.pdf'.format(filename)
+                        buffer = BytesIO()
+                        report = PdfPrint(buffer, 'A4')
+                        pdf = report.report("Report of"+" "+authNameStr+" "+"for"+" "+date,obj)
+                        response.write(pdf)
+                        return response
 
+                else:
+                    return render(request, self.temp1, {'user': request.session['users'], 'layers': all_layer_objects,
+                                                               'classes': all_class_objects,'msg':msg2})
 
 class addTrainingSets(View):
     tem = "test/test.html"
@@ -62,22 +121,13 @@ class addTrainingSets(View):
                 newObj.save()
                 return render(request,self.tem,{'layer':layer, 'clas':clas ,'parent':parent,'sentence':sentence,'obj':obj,'msg':"yes"})
             else:
+
+
                 return render(request,self.temp1,{'msg1':msg1,'user': request.session['users'], 'layers': all_layer_objects,
-                                                       'classes': all_class_objects})
-def PDF(request):
-    # Create the HttpResponse object with the appropriate PDF headers.
-    response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = 'attachment; filename="abc.pdf"'
+                    'classes': all_class_objects})
 
-    # Create the PDF object, using the response object as its "file."
-    p = canvas.Canvas(response)
 
-    # Draw things on the PDF. Here's where the PDF generation happens.
 
-    p.drawString(100, 100, "Hello world.")
 
-    # Close the PDF object
-    p.showPage()
-    p.save()
-    return response
+
 

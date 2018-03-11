@@ -1,32 +1,11 @@
-<html>
-{% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/main.css' %}"/>
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/ie8css' %}"/>
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/ie9.css' %}"/>
-<script src="{% static 'assets/js/ie/html5shiv.js' %}"></script>
-<head>
-    <title>INQUIAMAK</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-
-</head>
-<body class="landing">
-
-<!-- Header -->
-<header id="header" class="alt">
-    <h1><a href="">INQUIAMAK LOGIN</a></h1>
-</header>
-
-<!-- Nav -->
-<nav id="nav">
-    <ul class="links">
-
-    </ul>
-</nav>
-
-<!-- Banner -->
-<section id="banner">
+{% extends 'block/block.html' %}
+{% block title1 %}LOGIN{% endblock %}
+{% block title %}LOGIN{% endblock %}
+{% block navheader %}LOGIN PAGE {% endblock %}
+{% block nav%}
+{% endblock %}
+{% block body %}
+    <section id="banner">
     <i class="icon fa-diamond"></i>
     <h2>INQUIAMAK</h2>
     <p>MAKE YOUR WAY BETTER</p>
@@ -46,43 +25,10 @@
                 <h3>{{ msg }}</h3>
             </div>
         </div>
-        <li><button type="submit" name='submit' >Login</button></li>
+        <ul id="list">
+        <li><button type="submit" name='submit' value="login">Login</button>
+        <button type="submit" name='submit' value="signup"><a href="{% url 'register' %}">SignUp</a></button></li>
+        </ul>
     </form>
-
-
-</section>
-
-<!-- Footer -->
-<footer id="footer">
-    <div class="inner">
-        <ul class="icons">
-            <li><a href="https://www.facebook.com/CeylonElectricityBoard/" class="icon fa-facebook">
-                    <span class="label">Facebook</span>
-                </a></li>
-            <li><a href="https://twitter.com/CEB_lk?lang=en" class="icon fa-twitter">
-                    <span class="label">Twitter</span>
-                </a></li>
-            <li><a href="#" class="icon fa-instagram">
-                    <span class="label">Instagram</span>
-                </a></li>
-            <li><a href="https://www.linkedin.com/company/ceylon-electricity-board" class="icon fa-linkedin">
-                    <span class="label">LinkedIn</span>
-                </a></li>
-        </ul>
-        <ul class="copyright">
-            <li>&copy; INQUIAMAK</li>
-            <li>24 hours call center DIAL 1987</li>
-
-        </ul>
-    </div>
-</footer>
-
-<!-- Scripts -->
-<script src="{% static 'assets/js/jquery.min.js' %}"></script>
-<script src="{% static 'assets/js/util.js' %}"></script>
-<script src="{% static 'assets/js/ie/respond.min.js' %}"></script>
-<script src="{% static 'assets/js/main.js' %}"></script>
-
-
-</body>
-</html>
+    </section>
+{% endblock %}

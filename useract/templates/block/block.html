@@ -4,16 +4,17 @@
 <link rel="stylesheet" type="text/css" href="{% static 'assets/css/ie8css' %}"/>
 <link rel="stylesheet" type="text/css" href="{% static 'assets/css/ie9.css' %}"/>
 <script src="{% static 'assets/js/ie/html5shiv.js' %}"></script>
+
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <script src="{% static 'assets/js/ie/html5shiv.js' %}"></script>
+    <title>InquiaMaK Admin Page</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
 <header id="header" class="skel-layers-fixed">
+    <h1> <a href="">{% block navheader %}{% endblock %}</a></h1>
     {% block nav %}{% endblock %}
 
 
@@ -46,10 +47,12 @@
 </footer>
 
 <!-- Scripts -->
+<script src="{% static 'assets/js/ie/html5shiv.js' %}"></script>
 <script src="{% static 'assets/js/jquery.min.js' %}"></script>
 <script src="{% static 'assets/js/util.js' %}"></script>
 <script src="{% static 'assets/js/ie/respond.min.js' %}"></script>
 <script src="{% static 'assets/js/main.js' %}"></script>
+
 
 
 </body>

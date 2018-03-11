@@ -15,7 +15,7 @@
 <body>
 <!--navigation-->
 <header id="header" class="skel-layers-fixed">
-    <h1><a href="index.html">ADMIN HOME</a></h1>
+    <h1><a href="adminHome.html">ADMIN HOME</a></h1>
     <a href="{% url 'adminpage' %}">| HOME</a>
     <a href="{% url 'logout' %}">| LOG OUT</a>
 
@@ -55,12 +55,16 @@
                 {{ msg }}
             </p>
             <ul id="list">
-                        <li><button type="submit" class="btn tf-btn btn-default" name="from" value="home">Submit</button>
-                        <button type="reset" class="btn tf-btn btn-default" />Reset</li>
+                        <li><button type="submit" class="btn tf-btn btn-default" name="btn" value="view">View Report</button>
+                        <button type="reset" class="btn tf-btn btn-default" />Reset
+
+
             </ul>
+            <ul id="list">
+                <li><button type="submit" class="btn tf-btn btn-default" name="btn" value="pdf">Get Report</button>
+            </ul>
+            </form>
 
-
-        </form>
     </div>
 </section>
 
@@ -130,7 +134,7 @@
             <p>
                 {{ msg1 }}
             </p>
-            <ul>
+            <ul id="list">
                         <li><button type="submit" class="btn tf-btn btn-default" name="from" value="home">Submit</button>
                         <button type="reset" class="btn tf-btn btn-default" />Reset</li>
             </ul>

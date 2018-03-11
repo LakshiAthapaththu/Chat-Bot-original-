@@ -11,8 +11,9 @@ url(r'^logout/$', auth_views.logout, {'template_name': 'registration/login.html'
 url(r'^register/$',userView.SignUp.as_view(),name='register'),
 url(r'^viewhistory/$',customerView.viewInqury.as_view(),name='viewhistory'),
 url(r'^admin/$',views.getAdminPage.as_view(),name = 'adminpage'),
-url(r'^getpdf/$',adminView.PDF ,name = 'getPDF'),
+#url(r'^report/getPDF/$',adminView.PDF ,name = 'getPDF'),
 url(r'^viewreport/$',adminView.getReport.as_view(),name= 'viewreport'),
-url(r'^addData/$',adminView.addTrainingSets.as_view(),name= 'addData')
+url(r'^addData/$',adminView.addTrainingSets.as_view(),name= 'addData'),
+#url(r'^report/$',adminView.checkButton.as_view(),name='reports')
 ]
 

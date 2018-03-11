@@ -1,26 +1,13 @@
-<html>
-{% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/main.css' %}"/>
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/ie8css' %}"/>
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/ie9.css' %}"/>
-<script src="{% static 'assets/js/ie/html5shiv.js' %}"></script>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>INQUIAMAK-CREATE ACCOUNT</title>
+{% extends 'block/block.html' %}
+{% block title1 %}CREATE ACCOUNT{% endblock %}
+{% block title %}CREATE ACCOUNT{% endblock %}
+{% block navheader %}SIGN UP {% endblock %}
+{% block nav%}
+    <a href="{% url 'login' %}">| LOGIN PAGE</a>
 
-</head>
-<body>
-
-<!-- Header -->
-<header id="header" class="skel-layers-fixed">
-    <h1><a href="">CREATE YOUR ACCOUNT</a></h1>
-
-</header>
-
-
-<!--form-->
-<section>
+{% endblock %}
+{% block body %}
+    <section>
     <div class="container">
         <h2>  </h2>
         <form class="form-horizontal" action="" method="post">
@@ -28,46 +15,12 @@
             {% include 'form_temp/form_template.html' %}
             <div>
                 <p>      </p>
-                <button type="submit" class="btn tf-btn btn-default" name="sub" value=>SAVE </button>
-                <button type="reset" class="btn tf-btn btn-default" name="rst" value=>RESET</button>
+                <button type="submit"  name="sub" value="">SAVE </button>
+                <button type="reset"  name="rst" value=>RESET</button>
 
 
             </div>
-
-
-
         </form>
     </div>
-</section>
-<!--fotter-->
-<footer id="footer">
-    <div class="inner">
-        <ul class="icons">
-            <li><a href="#" class="icon fa-facebook">
-                    <span class="label">Facebook</span>
-                </a></li>
-            <li><a href="#" class="icon fa-twitter">
-                    <span class="label">Twitter</span>
-                </a></li>
-            <li><a href="#" class="icon fa-instagram">
-                    <span class="label">Instagram</span>
-                </a></li>
-            <li><a href="#" class="icon fa-linkedin">
-                    <span class="label">LinkedIn</span>
-                </a></li>
-        </ul>
-        <ul class="copyright">
-            <li>&copy; INQUIAMAK</li>
-            <li>24 hours call center DIAL 1987</li>
-
-        </ul>
-    </div>
-</footer>
-<script src="{% static 'assets/js/jquery.min.js' %}"></script>
-<script src="{% static 'assets/js/util.js' %}"></script>
-<script src="{% static 'assets/js/ie/respond.min.js' %}"></script>
-<script src="{% static 'assets/js/main.js' %}"></script>
-
-
-</body>
-</html>
+ </section>
+{% endblock %}
