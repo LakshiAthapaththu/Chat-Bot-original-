@@ -37,7 +37,7 @@
         <form method="post" action="{% url 'viewreport' %}">
             {% csrf_token %}
             <div class="row uniform 50%">
-                <input class="form-control" id="date" name="date"  placeholder="DD/MM/YYYY" type="text"/>
+                <input id="date" name="date"  placeholder="DD/MM/YYYY" type="text"/>
             </div>
                 <div class="12u$">
                     <p>
@@ -51,12 +51,12 @@
                         </select>
                     </div>
                 </div>
-            <p>
+            <p id="error">
                 {{ msg }}
             </p>
             <ul id="list">
                         <li><button type="submit" class="btn tf-btn btn-default" name="btn" value="view">View Report</button>
-                        <button type="reset" class="btn tf-btn btn-default" />Reset
+                            <button type="reset" class="btn tf-btn btn-default" />Reset</li>
 
 
             </ul>
@@ -77,7 +77,7 @@
         <form method="post" action="{% url 'addData' %}">
             {% csrf_token %}
             <div class="row uniform 50%">
-                <input class="form-control" id="sen" name="sentence" placeholder="SENTENCE" type="text"/>
+                <input id="date" name="sentence" placeholder="SENTENCE" type="text"/>
             </div>
                 <div class="12u$">
                     <p>
@@ -131,7 +131,7 @@
                         </select>
                     </div>
                 </div>
-            <p>
+            <p id="error">
                 {{ msg1 }}
             </p>
             <ul id="list">
@@ -161,7 +161,7 @@
                 </a></li>
         </ul>
         <ul class="copyright">
-            <li>&copy; MINDLABZ</li>
+            <li>&copy; INQUIAMAK</li>
             <li>24 hours call center DIAL 1987</li>
 
         </ul>

@@ -9,6 +9,12 @@
 */
 
 /* Reset */
+#error{
+	color: red;
+	align-content: center;
+	align-self: center;
+	align-content: center;
+}
 #he1{
 	font-size: small;
 }

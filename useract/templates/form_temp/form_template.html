@@ -1,11 +1,11 @@
-
 {% csrf_token %}
 {% for field in form %}
     <div class="form-group">
 
         <label>{{ field.label_tag  }}</label>
         <div class="col-sm-offset-2 col-sm-10">
-        <span class="text-danger small" >{{ field.errors }}</span>
+        <span >
+            <h5 id="error">{{ field.errors }}</h5></span>
     </div>
         <div class="col-sm-10">
             {{ field }}

@@ -1,9 +1,11 @@
 {% extends 'block/block.html' %}
-{% block title1 %}CREATE ACCOUNT{% endblock %}
-{% block title %}CREATE ACCOUNT{% endblock %}
-{% block navheader %}SIGN UP {% endblock %}
+{% block title1 %}EDIT DETAILS{% endblock %}
+{% block title %}EDIT DETAILS{% endblock %}
+{% block navheader %}EDIT DETAILS {% endblock %}
 {% block nav%}
-    <a href="{% url 'login' %}">| LOGIN PAGE</a>
+    <a href="{% url 'home' %}">| HOME</a>
+    <a href="{% url 'viewhistory' %}">| VIEW HISTORY</a>
+    <a href="{% url 'logout' %}">| LOG OUT</a>
 
 {% endblock %}
 {% block body %}
@@ -13,11 +15,15 @@
         <form class="form-horizontal" action="" method="post">
             {% csrf_token %}
             {% include 'form_temp/form_template.html' %}
+            <p>
+
+            </p>
+            <h4 id="error">{{ msg }}</h4>
             <div>
                 <p>      </p>
                 <button type="submit"  name="sub" value="">SAVE </button>
-                <button type="reset"  name="rst" value=>RESET</button>
-                {{ array }}
+                <button type="reset" class="btn tf-btn btn-default" />Reset
+
 
             </div>
         </form>

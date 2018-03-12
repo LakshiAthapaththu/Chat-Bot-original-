@@ -15,5 +15,6 @@ url(r'^admin/$',views.getAdminPage.as_view(),name = 'adminpage'),
 url(r'^viewreport/$',adminView.getReport.as_view(),name= 'viewreport'),
 url(r'^addData/$',adminView.addTrainingSets.as_view(),name= 'addData'),
 #url(r'^report/$',adminView.checkButton.as_view(),name='reports')
+url(r'^edit/$',customerView.editDetails.as_view(),name='editDetails'),
 ]
 
