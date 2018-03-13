@@ -16,13 +16,13 @@ class Report(models.Model):
     null=False,
     on_delete= models.CASCADE)
 
-
 class Inquiry(models.Model):
     inquiry_id = models.IntegerField(primary_key=True)
     #dateTime= models.TimeField(auto_now_add=True)
     USERNAME = models.ForeignKey(
        User,
        on_delete = models.CASCADE
+
     )
     description = models.CharField(max_length=1000)
     add_state = models.BooleanField()

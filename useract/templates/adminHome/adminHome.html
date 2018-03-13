@@ -1,33 +1,20 @@
-<html>
-{% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/main.css' %}"/>
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/ie8css' %}"/>
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/ie9.css' %}"/>
-<script src="{% static 'assets/js/ie/html5shiv.js' %}"></script>
-
-<head>
-    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
-    <script src="{% static 'assets/js/ie/html5shiv.js' %}"></script>
-    <title>InquiaMaK Admin Page</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
-<body>
-<!--navigation-->
-<header id="header" class="skel-layers-fixed">
-    <h1><a href="adminHome.html">ADMIN HOME</a></h1>
+{% extends 'block/block.html' %}
+{% block title1 %}HOME{% endblock %}
+{% block title %}HOME{% endblock %}
+{% block navheader %}HOME {% endblock %}
+{% block link %}{% endblock %}
+{% block nav%}
     <a href="{% url 'adminpage' %}">| HOME</a>
     <a href="{% url 'logout' %}">| LOG OUT</a>
-
-</header>
-
-
+{% endblock %}
+{% block body %}
+<!-- Two -->
 <section id="banner">
     <i class="icon fa-diamond"></i>
     <h2>INQUIAMAK INQUIRY MAKING SYSTEM</h2>
     <p>YOU ARE LOGGED IN AS {{ user }} </p>
 </section>
-<!-- Three -->
+<!-- Two -->
 <section id="four" class="wrapper style2 special">
     <div class="inner">
         <header class="major narrow">
@@ -52,16 +39,15 @@
                     </div>
                 </div>
             <p id="error">
-                {{ msg }}
+                <h4>{{ msg }}</h4>
             </p>
             <ul id="list">
                         <li><button type="submit" class="btn tf-btn btn-default" name="btn" value="view">View Report</button>
-                            <button type="reset" class="btn tf-btn btn-default" />Reset</li>
+
+                        <button type="submit" class="btn tf-btn btn-default" name="btn" value="pdf">Get Report</button>
+                        <button type="reset" class="btn tf-btn btn-default" />Reset</li>
 
 
-            </ul>
-            <ul id="list">
-                <li><button type="submit" class="btn tf-btn btn-default" name="btn" value="pdf">Get Report</button>
             </ul>
             </form>
 
@@ -132,7 +118,7 @@
                     </div>
                 </div>
             <p id="error">
-                {{ msg1 }}
+                <h4>{{ msg1 }}</h4>
             </p>
             <ul id="list">
                         <li><button type="submit" class="btn tf-btn btn-default" name="from" value="home">Submit</button>
@@ -143,35 +129,4 @@
         </form>
     </div>
 </section>
-<!-- Footer -->
-<footer  id="footer" >
-    <div class="inner">
-        <ul class="icons">
-            <li><a href="https://www.facebook.com/CeylonElectricityBoard/" class="icon fa-facebook">
-                    <span class="label">Facebook</span>
-                </a></li>
-            <li><a href="https://twitter.com/CEB_lk?lang=en" class="icon fa-twitter">
-                    <span class="label">Twitter</span>
-                </a></li>
-            <li><a href="#" class="icon fa-instagram">
-                    <span class="label">Instagram</span>
-                </a></li>
-            <li><a href="https://www.linkedin.com/company/ceylon-electricity-board" class="icon fa-linkedin">
-                    <span class="label">LinkedIn</span>
-                </a></li>
-        </ul>
-        <ul class="copyright">
-            <li>&copy; INQUIAMAK</li>
-            <li>24 hours call center DIAL 1987</li>
-
-        </ul>
-    </div>
-</footer>
-<script src="{% static 'assets/js/ie/html5shiv.js' %}"></script>
-<script src="{% static 'assets/js/jquery.min.js' %}"></script>
-<script src="{% static 'assets/js/util.js' %}"></script>
-<script src="{% static 'assets/js/ie/respond.min.js' %}"></script>
-<script src="{% static 'assets/js/main.js' %}"></script>
-
-</body>
-</html>
+{% endblock %}

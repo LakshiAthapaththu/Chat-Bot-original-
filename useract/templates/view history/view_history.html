@@ -4,7 +4,7 @@
 {% block navheader %}HISTORY{% endblock %}
 {% block nav%}
     <a href="{% url 'home' %}">| HOME</a>
-    <a href="{% url 'viewhistory' %}">| EDIT DETAILS</a>
+    <a href="{% url 'editDetails' %}">| EDIT DETAILS</a>
     <a href="{% url 'viewhistory' %}">| VIEW HISTORY</a>
   <a href="{% url 'logout' %}">| LOG OUT</a>
 {% endblock %}
@@ -27,11 +27,12 @@
             </tr>
             </thead>
             <tbody>
-            {% for object in obj %}
+            {% for object in obj%}
                 <tr>
                 <td>{{ object.inquiry_id }}</td>
                 <td>{{ object.description }}</td>
-                <td>{{ object.date }}</td>
+                <td>{{ object.report_id.report_id}}</td>
+                <!--add a separate date and time colomns-->
                 </tr>
             {% endfor %}
             </tbody>

@@ -18,7 +18,6 @@ class viewInqury(View):
         object = Inquiry.objects.filter(USERNAME=user_id)
         return render(request, self.temp, {'data':user_name, 'obj':object})
 
-
 class editDetails(View):
     form_class = editProfile
     temp = 'editDetails/editDetails.html'
@@ -39,7 +38,7 @@ class editDetails(View):
             user_name = request.session['users']
             obj_user = User.objects.filter(username=user_name)
             newUserName = request.POST.get('username')
-            current_pw = form.cleaned_data['current_pw']
+            current_pw = form.cleaned_data['current_password']
             new_pw = form.cleaned_data['new_password'].strip()
             confirm_pw = form.cleaned_data['confirm_password'].strip()
             user = authenticate(username=user_name, password=current_pw)
@@ -80,20 +79,25 @@ class editDetails(View):
                                             hasher = first_pass[0]
                                             salt = first_pass[1]  # grabbing salt from the first password of the database
                                             make_password(new_pw, salt, hasher)
+                                            #make encrypted password
                                             obj_user.update(password = make_password(new_pw, salt, hasher))
                                         if('email' in UpdateFields):
                                             obj_user.update(email=form.cleaned_data['email'])
                                         if('username' in UpdateFields):
+                                            #inqObj = Inquiry.objects.filter(USERNAME=str(user_name))
+                                            #for inqObject in inqObj:
+                                                #inqObject.update(USERNAME = form.cleaned_data['username'])
                                             obj_user.update(username=form.cleaned_data['username'])
-
+                                            request.session['users'] = form.cleaned_data['username']
+                                            user_name = request.session['users']
                                         return render(request, self.temp, {'form': form, 'msg': msg1})
                                     else:
                                         return render(request, self.temp, {'form': form, 'msg':msg2})
                             else:
-                                    return render(request, self.temp, {'form': form, 'msg':"nothing to update"})
+                                    return render(request, self.temp, {'form': form, 'msg':msg2})
                 else:
-                    return render(request, self.temp, {'form': form, 'msg': "already exist user name"})
+                    return render(request, self.temp, {'form': form, 'msg': "user name already exists"})
             else:
-                return render(request, self.temp, {'form': form, 'msg': "pw incorrect"})
+                return render(request, self.temp, {'form': form, 'msg': msg2})
         else:
             return render(request, self.temp, {'form': form})

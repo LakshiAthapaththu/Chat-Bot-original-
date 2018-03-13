@@ -9,6 +9,12 @@
 */
 
 /* Reset */
+#link{
+	text-underline: none;
+	text-decoration: none;
+	color: black;
+
+}
 #error{
 	color: red;
 	align-content: center;
@@ -250,14 +256,15 @@
 		border-bottom: solid 1px transparent;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
+		box-sizing: border-box ; /*changed*/
 	}
 
 	.row > * {
 		float: left;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+		box-sizing:border-box;
+		/*changed*/
 	}
 
 	.row:after, .row:before {
@@ -1665,7 +1672,8 @@
 		}
 
 	a {
-		text-decoration: underline;
+		text-decoration: none;
+		color: black; /*changed*/
 	}
 
 		a:hover {
@@ -1792,7 +1800,7 @@
 	}
 
 	a {
-		color: #51BAA4;
+		color: black;
 	}
 
 	strong, b {
@@ -2448,15 +2456,17 @@
 	}
 
 	table {
-		margin: 0 0 2em 0;
+		margin: 1cm 1cm 2em 0;
 		width: 100%;
 	}
+	/*changed*/
 
 		table tbody tr {
 			border-style: solid;
 			border-width: 1px;
-			border-left: 0;
-			border-right: 0;
+			border-left: 1cm;
+			border-right: 1cm;
+			/*changed*/
 		}
 
 		table td {
@@ -2895,7 +2905,8 @@
 			}
 
 			.wrapper.style1 a {
-				color: #51BAA4;
+				color: black;
+				/*changed*/
 			}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
@@ -3130,7 +3141,8 @@
 			}
 
 			.wrapper.style2 a {
-				color: #51BAA4;
+				color: black;
+				/*changed*/
 			}
 
 			.wrapper.style2 strong, .wrapper.style2 b {
@@ -3368,7 +3380,8 @@
 			}
 
 			.wrapper.style3 a {
-				color: #51BAA4;
+				color: black;
+				/*changed*/
 			}
 
 			.wrapper.style3 strong, .wrapper.style3 b {
@@ -3917,7 +3930,7 @@
 		}
 
 		#banner a {
-			color: #51BAA4;
+			color: black;
 		}
 
 		#banner strong, #banner b {
@@ -4147,9 +4160,13 @@
 
 	#footer {
 		background-color: #1E2832;  /*change the footer bachground color*/
+		position: relative;
+   		bottom:0;
+   		width:100%;
+   		height:300px; /* Height of the footer */
 		color: rgba(255, 255, 255, 0.75);
 		text-align: center;
-		position: relative;
+
 	}
 
 		#footer input, #footer select, #footer textarea {
@@ -4257,7 +4274,4 @@
 		}
 #list{
 	list-style: none;
-}
-#footer{
-	position: relative;
 }
