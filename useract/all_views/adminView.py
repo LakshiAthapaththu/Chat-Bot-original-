@@ -1,3 +1,4 @@
+import numpy
 from django.shortcuts import render
 from django.utils.datetime_safe import date
 from django.views.generic import View
@@ -13,7 +14,8 @@ import re
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter, A4
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph
-
+from  chatbot.functions import trainData
+from chatbot.functions.chat import think,clasify
 class PdfPrint():
     def __init__(self, buffer, pageSize):
         self.buffer = buffer
@@ -94,8 +96,8 @@ class getReport(View):
                                                                'classes': all_class_objects,'msg':msg2})
 
 class addTrainingSets(View):
-    tem = "test/test.html"
     temp1 = "adminHome/adminHome.html"
+    temp = "tem.html"
     def post(self,request):
         layer = request.POST.get('layer')
         clas = request.POST.get('class')
@@ -119,7 +121,10 @@ class addTrainingSets(View):
             if set_id is not None:
                 newObj = train(sentence=sentence, set_id=set_object)
                 newObj.save()
-                return render(request,self.tem,{'layer':layer, 'clas':clas ,'parent':parent,'sentence':sentence,'obj':obj,'msg':"yes"})
+                set = trainData.makeBags(set_object)
+                result =  clasify("train not coe at time",1,0,set[0],set[1],list(["train","bus"]))
+                return render(request,self.temp,{'layer':layer, 'clas':clas ,'parent':parent,
+                                                 'sentence':sentence,'obj':obj,'msg':"yes",'l2':result})
             else:
 
 

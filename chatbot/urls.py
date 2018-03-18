@@ -1,7 +1,6 @@
 from django.conf.urls import url
 from . import views
 
-
 urlpatterns = [
-url(r'^$',views.add,name='addToDataset'),
+url(r'^getbag/$',views.getbag.as_view(),name='getbag')
 ]
