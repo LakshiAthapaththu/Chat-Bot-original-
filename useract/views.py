@@ -33,5 +33,9 @@ def viewReport(request):
     template = loader.get_template('viewReport/daily_report.html')
     return HttpResponse(template.render(request))
 
+def getChatWindow(request):
+    template = loader.get_template('chatWindow/chatWindow.html')
+    return HttpResponse(template.render(request))
+
 
 

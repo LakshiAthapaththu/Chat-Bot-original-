@@ -16,17 +16,17 @@ class SignIn(View):
         staff_state = "no"
         #user1=User.objects.filter(username=username,password=password)
         user = authenticate(username=username, password=password)
+        request.session['users'] = username
         if user is not None:
-            request.session['users'] = username
+
             if(user.is_staff):
                 all_layer_objects = Layers.objects.all()
                 all_class_objects = Classes.objects.all()
-                return render(request, self.temp2, {'user': request.session['users'], 'layers': all_layer_objects,
+                return render(request, self.temp2, {'user': request.session['users'].upper() , 'layers': all_layer_objects,
                                                        'classes': all_class_objects})
 
             else:
-
-                return render(request, self.temp, {'user':request.session['users']})
+                return render(request, self.temp, {'user':request.session['users'].upper()})
         else:
             msg="invalid"
             return render(request, self.temp1, {'msg':msg})

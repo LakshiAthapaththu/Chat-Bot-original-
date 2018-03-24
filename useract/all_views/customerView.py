@@ -13,10 +13,9 @@ class viewInqury(View):
     temp = 'view history/view_history.html'
     def get(self,request):
         user_name = request.session['users']
-
         user_id = User.objects.get(username=user_name).pk
         object = Inquiry.objects.filter(USERNAME=user_id)
-        return render(request, self.temp, {'data':user_name, 'obj':object})
+        return render(request, self.temp, {'user':user_name.upper(), 'obj':object})
 
 class editDetails(View):
     form_class = editProfile

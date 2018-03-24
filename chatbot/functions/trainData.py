@@ -87,7 +87,7 @@ def makeBags(setObj):
     x=trainData(setobj,classnames,training_set,class_bags)
     return x
 
-def trainData(setObj,classes,trainingset,class_bags,hidden_neurons=10, alpha=1, epochs=500,dropout_percent=0.5):
+def trainData(setObj,classes,trainingset,class_bags,hidden_neurons=10, alpha=1, epochs=50000,dropout_percent=0.5):
     numpy.random.seed(1)
 
     #randomly select weights

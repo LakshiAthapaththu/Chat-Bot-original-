@@ -1,59 +1,48 @@
 <html>
 {% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/main.css' %}"/>
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/ie8css' %}"/>
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/ie9.css' %}"/>
-<script src="{% static 'assets/js/ie/html5shiv.js' %}"></script>
-
+<link rel="stylesheet" type="text/css" href="{% static 'assets5/css/main.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'assertsChatWindow/main.css' %}"/>
+<script src="{% static 'assertsChatWindow/main.js' %}"></script>
 <head>
-    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
-    <script src="{% static 'assets/js/ie/html5shiv.js' %}"></script>
-    <title>InquiaMaK Admin Page</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{% block title %}{% endblock %}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
-<body background="">
-<header id="header" class="skel-layers-fixed">
-    <h1>{% block navheader %}{% endblock %}</h1>
-    {% block nav %}{% endblock %}
+<body>
 
-
-</header>
 {% block body %}
 
 {% endblock %}
-<footer id="footer" >
-    <div class="inner">
-        <ul class="icons">
-            <li><a href="#" class="icon fa-facebook">
-                    <span class="label">Facebook</span>
-                </a></li>
-            <li><a href="#" class="icon fa-twitter">
-                    <span class="label">Twitter</span>
-                </a></li>
-            <li><a href="#" class="icon fa-instagram">
-                    <span class="label">Instagram</span>
-                </a></li>
-            <li><a href="#" class="icon fa-linkedin">
-                    <span class="label">LinkedIn</span>
-                </a></li>
-        </ul>
-        <ul class="copyright">
-            <li>&copy; INQUIAMAK</li>
-            <li>24 hours call center DIAL 1111</li>
-
-        </ul>
-    </div>
-</footer>
-
+            <footer id="footer">
+				<div class="inner">
+					<div class="flex">
+						<div class="copyright">
+							&copy; Untitled. Design: Lakshi Athapaththu.
+						</div>
+						<ul class="icons">
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
+							<li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
+							<li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
 <!-- Scripts -->
-<script src="{% static 'assets/js/ie/html5shiv.js' %}"></script>
-<script src="{% static 'assets/js/jquery.min.js' %}"></script>
-<script src="{% static 'assets/js/util.js' %}"></script>
-<script src="{% static 'assets/js/ie/respond.min.js' %}"></script>
-<script src="{% static 'assets/js/main.js' %}"></script>
-
-
+<script src="{% static 'assets5/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets5/js/skel.min.js' %}"></script>
+<script src="{% static 'assets5/js/util.js' %}"></script>
+<script src="{% static 'assets5/js/main.js' %}"></script>
+<script src="{% static 'assertsChatWindow/main.js' %}"></script>
+<script src="{% static 'extraJS/functions.js' %}"></script>
 
 </body>
+</html>
+<html>
+{% block page2 %}
+{% endblock %}
 </html>

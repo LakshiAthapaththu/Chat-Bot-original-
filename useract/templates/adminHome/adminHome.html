@@ -1,132 +1,146 @@
 {% extends 'block/block.html' %}
-{% block title1 %}HOME{% endblock %}
 {% block title %}HOME{% endblock %}
-{% block navheader %}HOME {% endblock %}
-{% block link %}{% endblock %}
-{% block nav%}
-    <a href="{% url 'adminpage' %}">| HOME</a>
-    <a href="{% url 'logout' %}">| LOG OUT</a>
-{% endblock %}
+<!-- Two -->
 {% block body %}
-<!-- Two -->
-<section id="banner">
-    <i class="icon fa-diamond"></i>
-    <h2>INQUIAMAK INQUIRY MAKING SYSTEM</h2>
-    <p>YOU ARE LOGGED IN AS {{ user }} </p>
-</section>
-<!-- Two -->
-<section id="four" class="wrapper style2 special">
-    <div class="inner">
-        <header class="major narrow">
-            <h2>Search Reports</h2>
-            <p></p>
-        </header>
-        <form method="post" action="{% url 'viewreport' %}">
-            {% csrf_token %}
-            <div class="row uniform 50%">
-                <input id="date" name="date"  placeholder="DD/MM/YYYY" type="text"/>
+    <body class="subpage">
+    <header id="header" >
+				<div class="inner" id="inner1">
+					<a href="{% url 'adminpage' %}" class="logo">MY HOME</a>
+					<nav id="nav" >
+                        <a href="{% url 'adminpage' %}">| HOME</a>
+                        <a href="{% url 'logout' %}">| LOGOUT</a>
+
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+    </header>
+    <section id="three" class="wrapper special">
+        <div class="inner">
+            <header class="align-center" id="headofAdminPage">
+                <h2>InquiaMaK</h2>
+                <p>Make Your Way Better </p>
+            </header>
+            <div class="flex flex-2" id="flexBox">
+                <article id="articleBox">
+                    <div id="topic" align="center">
+                        <header class="major narrow">
+                                <h3>SEARCH REPORTS</h3>
+                                <p></p>
+                        </header>
+                    </div>
+                            <form method="post" action="{% url 'viewreport' %}">
+                                {% csrf_token %}
+                                <input id="date" name="date"  placeholder="DD/MM/YYYY" type="text"/>
+
+                                <div class="12u$">
+                                    <p>
+
+                                    </p>
+                                    <div class="select-wrapper" >
+                                        <select name='authority' id="category">
+                                                <option value="3" selected disabled>AUTHORITY</option>
+                                                <option value="1"  id="optionval">Ceylon Transport Board</option>
+                                                <option value="2" id="optionval">Sri Lanka Railways</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <p id="error">
+                                    <h4 id="errorReport">{{ msg }}</h4>
+                                </p>
+                                <footer>
+                                   <!--<ul id="list">
+                                    <li><button type="submit" class="btn tf-btn btn-default" name="btn" value="view">View Report</button>
+                                        <button type="submit" class="btn tf-btn btn-default" name="btn" value="pdf">Get Report</button>
+                                        <button type="reset" class="btn tf-btn btn-default" />Reset</li>
+
+
+                                    </ul>-->
+                                <div align="center" id="btnFooter">
+                                    <button type="submit" class="btn tf-btn btn-default" name="btn" value="view">View Report</button>
+                                        <button type="submit" class="btn tf-btn btn-default" name="btn" value="pdf">Get Report</button>
+                                        <button type="reset" class="btn tf-btn btn-default" />Reset
+                                </div>
+                                </footer>
+
+                                </form>
+                </article>
+                <article id="articleBox">
+                <div align="center" id="topic">
+                    <header class="major narrow">
+                        <h3 id="adminh3">TRAIN DATA</h3>
+                    <p></p>
+                    </header>
+                </div>
+                    <form method="post" action="{% url 'addData' %}">
+                        {% csrf_token %}
+                        <input id="date" name="sentence" placeholder="SENTENCE" type="text"/>
+                        <div class="12u$">
+                                <p>
+
+                                </p>
+                                <div class="select-wrapper" >
+                                    <select name='layer' id="category" >
+                                        <option value="" selected disabled>LAYER</option>
+                                        {% for layer in layers %}
+                                            {% if layer.layer_id != 0 %}
+                                                <option value="{{ layer.layer_id }}" id="val1">{{ layer.layer_name }}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                        <p>
+
+                        </p>
+                            <div class="12u$">
+                                <p>
+
+                                </p>
+                                <div class="select-wrapper" >
+                                    <select name='class' id="category">
+                                    <option value="" selected disabled>CLASS</option>
+                                        {% for class in classes %}
+                                            {% if class.class_id != 0 %}
+                                                <option value="{{ class.class_id }}" id="val1">{{ class.class_name }}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                        <p>
+
+                        </p>
+                        <div class="12u$">
+                                <p>
+
+                                </p>
+                                <div class="select-wrapper" >
+                                    <select name='parent' id="category">
+                                        <option value="" selected disabled>PARENT CLASS</option>
+
+                                        {% for class in classes %}
+
+                                                <option value="{{ class.class_id }}" id="val1">{{ class.class_name }}</option>
+
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                        <p id="error">
+
+                            <h4 id="errorReport">{{ msg1 }}</h4>
+                        </p>
+                        <footer>
+                            <div align="center" id="btnFooter">
+                            <button type="submit" class="btn tf-btn btn-default" name="from" value="home">Submit</button>
+                            <button type="reset" class="btn tf-btn btn-default" />Reset
+                            </div>
+                        </footer>
+
+                    </form>
+                </article>
             </div>
-                <div class="12u$">
-                    <p>
-
-                    </p>
-                    <div class="select-wrapper" >
-                        <select name='authority' id="category">
-                            <option value="3" selected disabled>AUTHORITY</option>
-                            <option value="1" id="val1">Ceylon Transport Board</option>
-                            <option value="2" id="val2">Sri Lanka Railways</option>
-                        </select>
-                    </div>
-                </div>
-            <p id="error">
-                <h4>{{ msg }}</h4>
-            </p>
-            <ul id="list">
-                        <li><button type="submit" class="btn tf-btn btn-default" name="btn" value="view">View Report</button>
-
-                        <button type="submit" class="btn tf-btn btn-default" name="btn" value="pdf">Get Report</button>
-                        <button type="reset" class="btn tf-btn btn-default" />Reset</li>
-
-
-            </ul>
-            </form>
-
-    </div>
-</section>
-
-<section id="four" class="wrapper style2 special">
-    <div class="inner">
-        <header class="major narrow">
-            <h2>Train Data</h2>
-            <p></p>
-        </header>
-        <form method="post" action="{% url 'addData' %}">
-            {% csrf_token %}
-            <div class="row uniform 50%">
-                <input id="date" name="sentence" placeholder="SENTENCE" type="text"/>
-            </div>
-                <div class="12u$">
-                    <p>
-
-                    </p>
-                    <div class="select-wrapper" >
-                        <select name='layer' id="category" >
-                            <option value="" selected disabled>LAYER</option>
-                            {% for layer in layers %}
-                                {% if layer.layer_id != 0 %}
-                                    <option value="{{ layer.layer_id }}" id="val1">{{ layer.layer_name }}</option>
-                                {% endif %}
-                            {% endfor %}
-                        </select>
-                    </div>
-                </div>
-            <p>
-
-            </p>
-                <div class="12u$">
-                    <p>
-
-                    </p>
-                    <div class="select-wrapper" >
-                        <select name='class' id="category">
-                        <option value="" selected disabled>CLASS</option>
-                            {% for class in classes %}
-                                {% if class.class_id != 0 %}
-                                    <option value="{{ class.class_id }}" id="val1">{{ class.class_name }}</option>
-                                {% endif %}
-                            {% endfor %}
-                        </select>
-                    </div>
-                </div>
-            <p>
-
-            </p>
-            <div class="12u$">
-                    <p>
-
-                    </p>
-                    <div class="select-wrapper" >
-                        <select name='parent' id="category">
-                            <option value="" selected disabled>PARENT CLASS</option>
-
-                            {% for class in classes %}
-
-                                    <option value="{{ class.class_id }}" id="val1">{{ class.class_name }}</option>
-
-                            {% endfor %}
-                        </select>
-                    </div>
-                </div>
-            <p id="error">
-                <h4>{{ msg1 }}</h4>
-            </p>
-            <ul id="list">
-                        <li><button type="submit" class="btn tf-btn btn-default" name="from" value="home">Submit</button>
-                        <button type="reset" class="btn tf-btn btn-default" />Reset</li>
-            </ul>
-
-
-        </form>
-    </div>
-</section>
+        </div>
+    </section>
+</body>
 {% endblock %}

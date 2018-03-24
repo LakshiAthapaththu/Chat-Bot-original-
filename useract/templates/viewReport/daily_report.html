@@ -1,43 +1,54 @@
 {% extends 'block/block.html' %}
-{% block title1 %}REPORT{% endblock %}
 {% block title %}REPORT{% endblock %}
-{% block navheader %}DAILY REPORT{% endblock %}
-{% block nav %}
-    <a href="{% url 'adminpage' %}">| HOME</a>
-    <a href="{% url 'logout' %}">| LOG OUT</a>
-{% endblock %}
 {% block body %}
 <!-- Table -->
-    <p>
+    <body class="subpage">
+            <header id="header" >
+                        <div class="inner" id="inner1">
+                            <a class="logo">DAILY REPORT</a>
+                            <nav id="nav" >
+                                <a href="{% url 'adminpage' %}">| HOME</a>
+                                <a href="{% url 'logout' %}">| LOGOUT</a>
 
-    </p>
-    {% for object in authority %}
-        <h3 align="middle">Report of {{ object.authority_name}} for {{ date }}</h3>
-    {% endfor %}
+                            </nav>
+                            <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                        </div>
+            </header>
+            <p>
 
-<section>
-    <div class="table-wrapper">
-        <table class="alt">
-        <p>
-        </p>
-            <thead>
-            <tr>
-                <th>Inquiry ID</th>
-                <th>Description</th>
-
-            </tr>
-            </thead>
-            <tbody>
-            {% for obj in object %}
-                <tr>
-                <td>{{ obj.inquiry_id }}</td>
-                <td>{{ obj.description }}</td>
-
-                </tr>
+            </p>
+            {% for object in authority %}
+                <h3 align="middle" id="reportHeader">Report of {{ object.authority_name}} for {{ date }}</h3>
             {% endfor %}
-            </tbody>
 
-        </table>
-    </div>
-</section>
+        <section>
+            <div class="table-wrapper">
+                <table class="alt">
+                <p>
+                </p>
+                    <thead>
+                    <tr>
+                        <th>Inquiry ID</th>
+                        <th>User Name</th>
+                        <th>Description</th>
+                        <th>Reported Time</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for obj in object %}
+                        <tr>
+                        <td>{{ obj.inquiry_id }}</td>
+                        <td>{{ obj.USERNAME }}</td>
+                        <td>{{ obj.description }}</td>
+                        <td>10.50pm</td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+        </section>
+    </body>
 {% endblock %}

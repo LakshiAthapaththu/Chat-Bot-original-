@@ -16,5 +16,8 @@ url(r'^viewreport/$',adminView.getReport.as_view(),name= 'viewreport'),
 url(r'^addData/$',adminView.addTrainingSets.as_view(),name= 'addData'),
 #url(r'^report/$',adminView.checkButton.as_view(),name='reports')
 url(r'^edit/$',customerView.editDetails.as_view(),name='editDetails'),
+url(r'^chatWindow/$',views.getChatWindow,name='chatWindow')
+    #get the chatwindow remove later
+
 ]
 

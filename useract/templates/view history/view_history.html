@@ -1,43 +1,45 @@
 {% extends 'block/block.html' %}
-{% block title1 %}YOUR HISTORY{% endblock %}
 {% block title %}INQUIAMAK VIEW HISTORY{% endblock %}
-{% block navheader %}HISTORY{% endblock %}
-{% block nav%}
-    <a href="{% url 'home' %}">| HOME</a>
-    <a href="{% url 'editDetails' %}">| EDIT DETAILS</a>
-    <a href="{% url 'viewhistory' %}">| VIEW HISTORY</a>
-  <a href="{% url 'logout' %}">| LOG OUT</a>
-{% endblock %}
 {% block body %}
-<!-- Table -->
-    <p>
 
-    </p>
-    <p>
+    <body class="subpage">
+    <!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="{% url 'viewhistory' %}" class="logo">{{ user }}'S HISTORY</a>
+					<nav id="nav">
+                        <a href="{% url 'home' %}">| HOME</a>
+                        <a href="{% url 'editDetails' %}">| EDIT ME</a>
+						<a href="{% url 'logout' %}">| LOGOUT</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+    <!-- Table -->
+        <section>
+            <div class="table-wrapper">
+                <table class="alt">
+                    <thead>
+                    <tr>
+                        <th>Inquiry ID</th>
+                        <th>Description</th>
+                        <th>Reported Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for object in obj%}
+                        <tr>
+                        <td>{{ object.inquiry_id }}</td>
+                        <td>{{ object.description }}</td>
+                        <td>{{ object.report_id.report_id}}</td>
+                        <!--add a separate date and time colomns-->
+                        </tr>
+                    {% endfor %}
+                    </tbody>
 
-    </p>
-<section>
-    <div class="table-wrapper">
-        <table class="alt">
-            <thead>
-            <tr>
-                <th>Inquiry ID</th>
-                <th>Description</th>
-                <th>Reported Date</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for object in obj%}
-                <tr>
-                <td>{{ object.inquiry_id }}</td>
-                <td>{{ object.description }}</td>
-                <td>{{ object.report_id.report_id}}</td>
-                <!--add a separate date and time colomns-->
-                </tr>
-            {% endfor %}
-            </tbody>
+                </table>
+        </div>
+        </section>
 
-        </table>
-    </div>
-</section>
+
 {% endblock %}

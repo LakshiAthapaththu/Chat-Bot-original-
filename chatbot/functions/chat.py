@@ -20,3 +20,4 @@ def clasify(sentence,layer,parent,synapse_0,synapse_1,classes):
     results.sort(key=lambda x: x[1], reverse=True)
     return_results = [[classes[r[0]], r[1]] for r in results]
     return l2,results,return_results
+

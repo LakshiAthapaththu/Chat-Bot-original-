@@ -1,13 +1,70 @@
 {% extends 'block/block.html' %}
-{% block title %}INQUIAMAK HOME{% endblock %}
-{% block title1 %}HOME{% endblock %}
-{% block navheader %}HOME {% endblock %}
-{% block nav%}
-    <a href="{% url 'editDetails' %}">| EDIT DETAILS</a>
-    <a href="{% url 'viewhistory' %}">| VIEW HISTORY</a>
-  <a href="{% url 'logout' %}">| LOG OUT</a>
-{% endblock %}
+{% block title %}HOME{% endblock %}
 {% block body %}
-  <h1>{{ user }}</h1>
-    <h1>{{ staff }}</h1>
+   <body class="subpage">
+        <!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="{% url 'home' %}" class="logo">{{ request.session.users }} S'HOME</a>
+					<nav id="nav">
+						<a href="{% url 'logout' %}">| LOGOUT</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+        <!--section 1-->
+           <section id="two" class="wrapper style1 special">
+                        <div class="inner">
+                            <header>
+
+                                <h2>InquiaMaK</h2>
+
+                                <p>Make your way better</p>
+                            </header>
+                            <div class="flex flex-4">
+                                <div class="box person">
+                                    <div class="image round">
+                                        <img src="../../static/images/bot.png" alt="Person 1" />
+                                    </div>
+                                    <p id="parawhite">
+                                        hi
+                                    </p>
+
+
+                                    <h3 id="h3pb"><a href="">Make Inquiry</a>a</h3>
+                                    <p id="parapb">Use MR.Bot </p>
+                                </div>
+                                <div class="box person">
+                                    <div class="image round">
+                                        <img src="../../static/images/history.png" alt="Person 2" />
+                                    </div>
+                                    <h3  id="h3pb"><a href="{% url 'viewhistory' %}">My History</a></h3>
+                                    <p id="parapb">Know What You Did</p>
+                                </div>
+                                <div class="box person">
+                                    <div class="image round">
+                                        <img src="../../static/images/edit.png" alt="Person 3" />
+                                    </div>
+                                    <h3 id="h3pb"><a href="{% url 'editDetails' %}">Edit You</a></h3>
+                                    <p id="parapb">Make Your Change</p>
+                                </div>
+                                <div class="box person">
+                                    <div class="image round">
+                                        <img src="../../static/images/createAcc3.png" alt="Person 4" />
+                                    </div>
+                                    <h3 id="h3pb"><a href="{% url 'register' %}">Create Account</a></h3>
+                                    <p id="parapb">Enhance the Community</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+        <!--section 1-->
+
+   </body>
+
 {% endblock %}
+{% block page2 %}
+    {% include 'chatWindow/chatWindow.html' %}
+{% endblock %}
+

@@ -1,27 +1,32 @@
 {% extends 'block/block.html' %}
-{% block title1 %}CREATE ACCOUNT{% endblock %}
 {% block title %}CREATE ACCOUNT{% endblock %}
-{% block navheader %}SIGN UP {% endblock %}
-{% block link %}{% endblock %}
-{% block nav%}
-    <a href="{% url 'login' %}">| LOGIN PAGE</a>
-
-{% endblock %}
 {% block body %}
+
+    <body class="subpage">
+    <header id="header">
+				<div class="inner">
+					<a href="{% url 'register' %}" class="logo">SIGNUP</a>
+					<nav id="nav">
+                        <a href="{% url 'login' %}">| LOGIN</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
     <section>
     <div class="container">
         <h2>  </h2>
-        <form class="form-horizontal" action="" method="post">
+        <form class="form-horizontal" action="" method="post" id="forms">
             {% csrf_token %}
             {% include 'form_temp/form_template.html' %}
             <div>
                 <p>      </p>
-                <button type="submit"  name="sub" value="">SAVE </button>
-                <button type="reset"  name="rst" value=>RESET</button>
+                <button id="subBtn" type="submit" name="sub" value="">SAVE </button>
+                <button id="subBtn" type="reset"  name="rst" value=>RESET</button>
                 {{ array }}
 
             </div>
         </form>
     </div>
  </section>
+</body>
 {% endblock %}

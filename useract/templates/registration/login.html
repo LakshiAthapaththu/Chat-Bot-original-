@@ -1,13 +1,8 @@
 {% extends 'block/block.html' %}
-{% block title1 %}LOGIN{% endblock %}
 {% block title %}LOGIN{% endblock %}
-{% block navheader %}LOGIN PAGE {% endblock %}
-{% block nav%}
-{% endblock %}
 {% block body %}
     <section id="banner">
-    <i class="icon fa-diamond"></i>
-    <h2>INQUIAMAK</h2>
+    <h1>INQUIAMAK</h1>
     <p>MAKE YOUR WAY BETTER</p>
     <form action="" method="post">
         {% csrf_token %}
@@ -15,19 +10,19 @@
             <div class="row uniform 50%">
                 <div class="6u 12u$(xsmall)">
                     <h4>User Name</h4>
-                    <input name="username" id="textinput" type="text" />
+                    <input name="username" id="logininput"  type="text" />
                 </div>
                 <div class="6u$ 12u$(xsmall)">
                     <h4>Password</h4>
-                    <input name="password"  type="password" id="pw"/>
+                    <input name="password" id="logininput" type="password" id="pw"/>
 
                 </div>
                 <h3>{{ msg }}</h3>
             </div>
         </div>
         <ul id="list">
-        <li><button type="submit" name='submit' value="login">Login</button>
-        <button type="submit" name='submit' value="signup"><a id="link" href="{% url 'register' %}">SignUp</a></button></li>
+        <li><button type="submit" name='submit' value="login" id="bannerbtn">Login</button>
+        <button  value="signup" id="bannerbtn"><a id="link" href="{% url 'register' %}">SignUp</a></button></li>
         </ul>
     </form>
     </section>
