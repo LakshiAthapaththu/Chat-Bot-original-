@@ -9,7 +9,7 @@
 }
 .open-more{
   bottom:0px;
-  transition:2s;
+  transition:1ms;
 }
 .border-chat{
   border:1px solid #51BAA4;
@@ -93,14 +93,17 @@
 }
 .third-section{
   border-top: 1px solid #EEEEEE;
-  opacity: 1;
 }
 .text-bar input{
-  width:90%;
+  width:80%;
   margin-left:-15px;
   padding:10px 10px;
   border:1px solid #fff;
 
+
+}
+.text-bar a{
+    width: 40px;
 }
 .text-bar a i{
   background-color:#51BAA4;
@@ -129,7 +132,9 @@
   border:15px solid transparent;
   border-top-color:#fff;
 }
-#textbar{
-   width: 3cm;
-
+#abc{
+    float: right;
+}
+#main{
+  visibility: hidden;
 }

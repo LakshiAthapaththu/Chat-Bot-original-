@@ -2,90 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50e52ba7-d3d9-4ee7-a3b6-911e8be31bc2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/css/ie9.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/css/images/overlay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/js/ie/html5shiv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/js/ie/respond.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/js/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/js/skel.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/js/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/base/_page.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/base/_typography.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/components/_box.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/components/_button.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/components/_feature.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/components/_form.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/components/_icon.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/components/_image-grid.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/components/_image.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/components/_list.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/components/_section.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/components/_table.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/components/_wrapper.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/ie9.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/layout/_banner.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/layout/_footer.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/layout/_header.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/layout/_main.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/layout/_nav.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/libs/_functions.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/libs/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/libs/_skel.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/libs/_vars.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/assets/sass/main.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/CEB-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/Capture.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/a.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/abc.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/b.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/banner.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/cc.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/dd.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/im1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/index.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/news1.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/news2.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/pic01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/pic02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/pic03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/pic04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/pic05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/pic06.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/pic07.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/pic08.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/pic09.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/pic10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/useract/static/images/pic11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chatbot/all_models/Class.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chatbot/all_models/Layer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chatbot/all_models/Synapsys.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chatbot/all_models/Train.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/InquaryMakingChatBot.iml" afterPath="$PROJECT_DIR$/.idea/InquaryMakingChatBot.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chatbot/functions/chat.py" afterPath="$PROJECT_DIR$/chatbot/functions/chat.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chatbot/functions/trainData.py" afterPath="$PROJECT_DIR$/chatbot/functions/trainData.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chatbot/urls.py" afterPath="$PROJECT_DIR$/chatbot/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chatbot/views.py" afterPath="$PROJECT_DIR$/chatbot/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/all_views/adminView.py" afterPath="$PROJECT_DIR$/useract/all_views/adminView.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/all_views/customerView.py" afterPath="$PROJECT_DIR$/useract/all_views/customerView.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/all_views/userView.py" afterPath="$PROJECT_DIR$/useract/all_views/userView.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/templates/adminHome/adminHome.html" afterPath="$PROJECT_DIR$/useract/templates/adminHome/adminHome.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/static/assertsChatWindow/main.css" afterPath="$PROJECT_DIR$/useract/static/assertsChatWindow/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/static/assertsChatWindow/main.js" afterPath="$PROJECT_DIR$/useract/static/assertsChatWindow/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/static/assets5/css/main.css" afterPath="$PROJECT_DIR$/useract/static/assets5/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/templates/block/block.html" afterPath="$PROJECT_DIR$/useract/templates/block/block.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/templates/editDetails/editDetails.html" afterPath="$PROJECT_DIR$/useract/templates/editDetails/editDetails.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/templates/form/user_form.html" afterPath="$PROJECT_DIR$/useract/templates/form/user_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/templates/form_temp/form_template.html" afterPath="$PROJECT_DIR$/useract/templates/form_temp/form_template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/templates/chatWindow/chatWindow.html" afterPath="$PROJECT_DIR$/useract/templates/chatWindow/chatWindow.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/templates/home/home.html" afterPath="$PROJECT_DIR$/useract/templates/home/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/templates/registration/login.html" afterPath="$PROJECT_DIR$/useract/templates/registration/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/templates/view history/view_history.html" afterPath="$PROJECT_DIR$/useract/templates/view history/view_history.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/templates/viewReport/daily_report.html" afterPath="$PROJECT_DIR$/useract/templates/viewReport/daily_report.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/urls.py" afterPath="$PROJECT_DIR$/useract/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useract/views.py" afterPath="$PROJECT_DIR$/useract/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -113,31 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/useract/templates/registration/login.html">
+      <file leaf-file-name="block.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/useract/templates/block/block.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/useract/templates/home/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/useract/static/assets5/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="2032" column="0" lean-forward="true" selection-start-line="2032" selection-start-column="0" selection-end-line="2032" selection-end-column="0" />
+            <state relative-caret-position="1100">
+              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -147,59 +55,37 @@
         <entry file="file://$PROJECT_DIR$/useract/templates/view history/view_history.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/useract/static/assertsChatWindow/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="107" column="10" lean-forward="false" selection-start-line="107" selection-start-column="10" selection-end-line="107" selection-end-column="10" />
+            <state relative-caret-position="475">
+              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="block.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/useract/templates/block/block.html">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/useract/static/assertsChatWindow/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="46" column="11" lean-forward="false" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+            <state relative-caret-position="125">
+              <caret line="5" column="48" lean-forward="false" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editDetails.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/useract/templates/editDetails/editDetails.html">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/useract/templates/home/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-              <folding>
-                <element signature="e#936#955#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form_template.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/useract/templates/form_temp/form_template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chatWindow.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/useract/templates/chatWindow/chatWindow.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="95" column="34" lean-forward="false" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
+            <state relative-caret-position="138">
+              <caret line="7" column="88" lean-forward="false" selection-start-line="7" selection-start-column="88" selection-end-line="7" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -252,7 +138,6 @@
         <option value="$PROJECT_DIR$/chatbot/templates/result.html" />
         <option value="$PROJECT_DIR$/useract/views.py" />
         <option value="$PROJECT_DIR$/useract/urls.py" />
-        <option value="$PROJECT_DIR$/useract/static/assertsChatWindow/main.js" />
         <option value="$PROJECT_DIR$/useract/static/assets/css/main1.css" />
         <option value="$PROJECT_DIR$/useract/static/assets/css/main.css" />
         <option value="$PROJECT_DIR$/InquaryMakingChatBot/settings.py" />
@@ -270,9 +155,10 @@
         <option value="$PROJECT_DIR$/useract/templates/adminHome/adminHome.html" />
         <option value="$PROJECT_DIR$/useract/templates/viewReport/daily_report.html" />
         <option value="$PROJECT_DIR$/useract/static/assets5/css/main.css" />
-        <option value="$PROJECT_DIR$/useract/templates/home/home.html" />
-        <option value="$PROJECT_DIR$/useract/templates/block/block.html" />
         <option value="$PROJECT_DIR$/useract/templates/chatWindow/chatWindow.html" />
+        <option value="$PROJECT_DIR$/useract/templates/block/block.html" />
+        <option value="$PROJECT_DIR$/useract/static/assertsChatWindow/main.js" />
+        <option value="$PROJECT_DIR$/useract/templates/home/home.html" />
         <option value="$PROJECT_DIR$/useract/static/assertsChatWindow/main.css" />
       </list>
     </option>
@@ -290,7 +176,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="214" />
     <option name="y" value="32" />
     <option name="width" value="1559" />
@@ -328,6 +214,19 @@
               <item name="InquaryMakingChatBot" type="b2602c69:ProjectViewProjectNode" />
               <item name="InquaryMakingChatBot" type="462c0819:PsiDirectoryNode" />
               <item name="useract" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InquaryMakingChatBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InquaryMakingChatBot" type="462c0819:PsiDirectoryNode" />
+              <item name="useract" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assertsChatWindow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InquaryMakingChatBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InquaryMakingChatBot" type="462c0819:PsiDirectoryNode" />
+              <item name="useract" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -337,31 +236,17 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="block" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="InquaryMakingChatBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InquaryMakingChatBot" type="462c0819:PsiDirectoryNode" />
-              <item name="useract" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="chatWindow" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InquaryMakingChatBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InquaryMakingChatBot" type="462c0819:PsiDirectoryNode" />
-              <item name="useract" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../done9" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -430,20 +315,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1046" extended-state="7" />
+    <frame x="-11" y="-11" width="1942" height="1046" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2545946" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26378378" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853025" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.0945946" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.9054054" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.547929" sideWeight="0.49783784" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.03668639" sideWeight="0.9054054" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24948876" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10059172" sideWeight="0.49567568" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -484,17 +369,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chatbot/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/useract/templates/test/test.html" />
     <entry file="file://$PROJECT_DIR$/useract/templates/test/test.py" />
     <entry file="file://C:/Program Files (x86)/python 3.5/Lib/site-packages/django-1.9-py3.5.egg/django/contrib/auth/models.py">
@@ -568,13 +448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="839">
           <caret line="86" column="5" lean-forward="false" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatbot/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -701,25 +574,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/useract/static/assertsChatWindow/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/useract/static/extraJS/functions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/useract/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
+        <state relative-caret-position="600">
           <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
           <folding />
         </state>
@@ -733,21 +597,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/useract/templates/editDetails/editDetails.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-          <folding>
-            <element signature="e#936#955#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/useract/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -775,18 +628,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chatbot/all_models/Class.py" />
+    <entry file="file://$PROJECT_DIR$/chatbot/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/useract/templates/form_temp/form_template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
-          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/useract/templates/editDetails/editDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/useract/templates/block/block.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/useract/templates/chatWindow/chatWindow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2550">
+          <caret line="102" column="7" lean-forward="true" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/useract/static/assets5/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="2032" column="0" lean-forward="true" selection-start-line="2032" selection-start-column="0" selection-end-line="2032" selection-end-column="0" />
+        <state relative-caret-position="125">
+          <caret line="3114" column="11" lean-forward="false" selection-start-line="3114" selection-start-column="11" selection-end-line="3114" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -794,39 +678,31 @@
     <entry file="file://$PROJECT_DIR$/useract/templates/view history/view_history.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/useract/templates/block/block.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="46" column="11" lean-forward="false" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/useract/templates/home/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/useract/templates/chatWindow/chatWindow.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="95" column="34" lean-forward="false" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
+        <state relative-caret-position="138">
+          <caret line="7" column="88" lean-forward="false" selection-start-line="7" selection-start-column="88" selection-end-line="7" selection-end-column="88" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/useract/static/assertsChatWindow/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="107" column="10" lean-forward="false" selection-start-line="107" selection-start-column="10" selection-end-line="107" selection-end-column="10" />
+        <state relative-caret-position="475">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/useract/static/assertsChatWindow/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="48" lean-forward="false" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
           <folding />
         </state>
       </provider>

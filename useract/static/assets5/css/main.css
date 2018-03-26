@@ -2017,6 +2017,7 @@
 		-ms-appearance: none;
 		appearance: none;
 		background: rgba(0, 0, 0, 0.12);
+		opacity: 1;
 		border-radius: 0;
 		border: none;
 		border: solid 1px #dbdbdb;
@@ -3111,7 +3112,7 @@
 	font-weight: bold;
 }
 
-#h3pb{
+#h3pb,#h4pb{
 	color: #5385c1;
 	font-weight: bold;
 }
