@@ -132,9 +132,7 @@
   border:15px solid transparent;
   border-top-color:#fff;
 }
-#abc{
-    float: right;
-}
+
 #main{
   visibility: hidden;
 }

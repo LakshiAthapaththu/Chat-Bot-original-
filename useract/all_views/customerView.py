@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 from useract.forms import editProfile
 import re
 from django.contrib.auth.hashers import make_password
-
+from django.http import JsonResponse
 
 class viewInqury(View):
     temp = 'view history/view_history.html'
@@ -100,3 +100,19 @@ class editDetails(View):
                 return render(request, self.temp, {'form': form, 'msg': msg2})
         else:
             return render(request, self.temp, {'form': form})
+
+def posting(request):
+    if request.method == 'POST':
+        msg = request.POST.get('msgbox')
+        return JsonResponse({'msg': msg})
+class abc(View):
+    temp = "test/test.html"
+    def post(self,request):
+        msg = request.POST.get('msgbox', 'None')
+        return render(request, self.temp, {'msg': msg})
+
+class testing(View):
+    temp = "test/test.html"
+    def get(self,request):
+        return render(request, self.temp)
+
