@@ -18,7 +18,7 @@ url(r'^addData/$',adminView.addTrainingSets.as_view(),name= 'addData'),
 url(r'^edit/$',customerView.editDetails.as_view(),name='editDetails'),
 url(r'^chatWindow/$',views.getChatWindow,name='chatWindow'),
     #get the chatwindow remove later
-url(r'^post/$',customerView.posting,name='post'),
-url(r'^test/$',customerView.testing.as_view(),name='test')
+url(r'^get/$',customerView.getpage,name='get'),
+url(r'^test/$',customerView.testing,name='test'),
 ]
 

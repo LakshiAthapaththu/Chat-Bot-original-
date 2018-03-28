@@ -8,7 +8,7 @@ from useract.forms import editProfile
 import re
 from django.contrib.auth.hashers import make_password
 from django.http import JsonResponse
-
+from useract.functions import chat
 class viewInqury(View):
     temp = 'view history/view_history.html'
     def get(self,request):
@@ -105,14 +105,13 @@ def posting(request):
     if request.method == 'POST':
         msg = request.POST.get('msgbox')
         return JsonResponse({'msg': msg})
-class abc(View):
-    temp = "test/test.html"
-    def post(self,request):
-        msg = request.POST.get('msgbox', 'None')
-        return render(request, self.temp, {'msg': msg})
 
-class testing(View):
-    temp = "test/test.html"
-    def get(self,request):
-        return render(request, self.temp)
+def getpage(request):
+    return render(request,"test/test.html")
+
+
+def testing(request):
+    data = request.GET.get('val', None)
+    reply = chat.reply(data)
+    return JsonResponse({'msg':reply})
 

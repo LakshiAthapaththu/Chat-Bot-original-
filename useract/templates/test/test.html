@@ -10,6 +10,29 @@
 <input type="text" name="chatmsg" id="chat">
 <button  id="sub">submit</button>
 <p id="paragr"></p>
+<script>
+    $("#sub").click(function (e) {
+      e.preventDefault();
+      var val = $("#chat").val();
+
+
+      $.ajax({
+        type : 'GET',
+        url: '{% url 'test' %}',
+        data: {
+          'val': val
+        },
+        dataType: 'json',
+        success: function (json) {
+            $("#paragr").append(json.data);
+            alert("added");
+
+        }
+      });
+
+    });
+
+</script>
 <script src="{% static 'assertsChatWindow/chat.js' %}"></script>
 </body>
 </html>

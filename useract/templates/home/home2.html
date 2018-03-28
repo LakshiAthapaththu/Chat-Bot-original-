@@ -1,0 +1,41 @@
+<script>
+        $("#send").click(function (e) {
+          e.preventDefault();
+          var val = $("#msgbox").val();
+          $(".ulclass").append(
+                        '<li>'+
+                            '<div class="left-chat">'+
+                                '<img src="../../static/images/pic03.jpg">'+
+                                '<p>'+val+'<br>'+'<br>'+'2min'+
+                                '</p>'+
+
+                            '</div>'+
+                        '</li>'
+
+        );
+          $.ajax({
+            type : 'GET',
+            url: '{% url 'test' %}',
+            data: {
+              'val': val
+            },
+            dataType: 'json',
+            success: function (json) {
+
+                $(".ulclass").append(
+                        '<li>'+
+                            '<div class="right-chat">'+
+                                '<img src="../../static/images/pic03.jpg">'+
+                                '<p>'+json.msg+'<br>'+'<br>'+'2min'+
+                                '</p>'+
+
+                            '</div>'+
+                        '</li>'
+
+        );
+            }
+          });
+        $("#msgbox").val("");
+    });
+
+</script>
