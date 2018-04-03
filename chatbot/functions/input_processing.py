@@ -4,7 +4,7 @@ from chatbot.models import  train, sets
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
-
+#............remove this
 def get_all_words(layer,parent):
     ignore_words =['?'] #add more into this
     all_words = []
@@ -27,7 +27,7 @@ def clean_up_sentence(sentence):
     #tokenize the sentence and give tokenized set of words.
 
 
-def give_word_bag(sentence, words,layer_id,parent_id):
+def give_word_bag(sentence, words):
     sentence_words = clean_up_sentence(sentence)
     # bag of words
     bag = [0] * len(words)
@@ -36,4 +36,4 @@ def give_word_bag(sentence, words,layer_id,parent_id):
             if w == s:
                 bag[i] = 1
 
-    return (numpy.array(bag))
+    return (numpy.array(bag),sentence_words)

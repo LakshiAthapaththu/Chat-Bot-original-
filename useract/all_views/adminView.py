@@ -18,7 +18,6 @@ from  chatbot.functions import trainData
 from chatbot.functions.chat import think,clasify
 from chatbot.functions.storeSynapes import read,write
 
-
 class PdfPrint():
     def __init__(self, buffer, pageSize):
         self.buffer = buffer
@@ -124,12 +123,15 @@ class addTrainingSets(View):
             if set_id is not None:
                 newObj = train(sentence=sentence, set_id=set_object)
                 newObj.save()
-                set = trainData.makeBags(set_object)
-                write(set[0],set[1])
-                result = read()
+                finalSet = (trainData.makeBags(set_object))
+                set = finalSet[0]
+                write(set[0],set[1], str(layer), str(parent),finalSet[1])
+                #write(set[0],set[1],layer,parent)
+                result = read(layer,parent)
                 #result =  clasify("bus does not come at time",1,0,set[0],set[1],list(["bus","train"]))
                 return render(request,self.temp,{'layer':layer, 'clas':clas ,'parent':parent,
-                                                 'sentence':sentence,'obj':obj,'msg':"yes",'l2':result})
+                                                 'sentence':sentence,'obj':obj,'msg':"yes",
+                                                 'words':finalSet[1],'allsent':finalSet[2],'classes':finalSet[3]})
             else:
 
 

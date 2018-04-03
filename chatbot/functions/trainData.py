@@ -7,11 +7,13 @@ import datetime
 import numpy
 stemmer = LancasterStemmer()
 from chatbot.functions.general_functions import derivative,sigmoid
+from chatbot.functions import storeSynapes
 
 def makeBags(setObj):
     #setObject = sets.objects.filter(set_id=set_id)
     parent = setObj.parent_id
     layer = setObj.layer_id_of
+    layer1 = setObj.layer_id_of.layer_id
     fetched_sentences = train.objects.all()
     classes = []
     all_sets = sets.objects.all()
@@ -85,7 +87,7 @@ def makeBags(setObj):
         TrainObj.update(class_bag = class_bag)
     # sample training/output
     x=trainData(setobj,classnames,training_set,class_bags)
-    return x
+    return x,words,training_set,class_bags
 
 def trainData(setObj,classes,trainingset,class_bags,hidden_neurons=10, alpha=1, epochs=50000,dropout_percent=0.5):
     numpy.random.seed(1)

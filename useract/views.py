@@ -5,12 +5,14 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from chatbot.models import  Classes,Layers
 from .models import Inquiry
+from useract.functions import chat
 
 #def getLoginPage(request):
     #template = loader.get_template('loginPage/login.html')
     #return HttpResponse(template.render(request))
 
 def getHomePage(request):
+    chat.setTo(0)
     template = loader.get_template('home/home.html')
     return HttpResponse(template.render(request))
 
