@@ -23,7 +23,7 @@ class chat(View):
         return render(request, self.temp1)
     def post(self,request):
         sentence = request.POST.get('text')
-        synap = read(1,0)
-        result = clasify(sentence,1,0,synap[0],synap[1],list(["bus","train"]))
+        synap = read(2,1)
+        result = clasify(sentence,2,1,synap[0],synap[1],list(["conductor","passengers","route","busitself","driver"]))
 
         return render(request, self.temp2, {'result': result,'words':synap[2]})

@@ -112,6 +112,7 @@ def getpage(request):
 
 def testing(request):
     data = request.GET.get('val', None)
-    reply = chat.reply(data)
+    user = request.session['users']
+    reply = chat.reply(data,user)
     return JsonResponse({'msg':reply})
 
